@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4e3287fd-f6d2-43be-8812-e0abff2ef580)# EXNO-6-DS-DATA VISUALIZATION USING SEABORN LIBRARY
+# EXNO-6-DS-DATA VISUALIZATION USING SEABORN LIBRARY
 
 # Aim:
   To Perform Data Visualization using seaborn python library for the given datas.
@@ -164,26 +164,41 @@ mart.head(10)
 sns.kdeplot(data=mart,x='PassengerId')
 ```
 ![image](https://github.com/user-attachments/assets/111b83af-1487-45af-9eed-9f6af39db760)
+```
+import seaborn as sns
+import pandas as pd
 
+# Assuming 'mart' is your DataFrame
+mart=pd.read_csv("titanic_dataset.csv")
+mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']]
 
+sns.kdeplot(data=mart, x='Age')
+```
+![image](https://github.com/user-attachments/assets/b4e22b7e-b4fc-4135-b77e-2482a8fa8939)
+```
+sns.kdeplot(data=mart)
+```
+![image](https://github.com/user-attachments/assets/b5c76ac5-5249-4c71-9672-8be0aecac514)
+```
+sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
+```
+![image](https://github.com/user-attachments/assets/984a6fa3-80b6-4378-9eb0-c72770c13bd0)
+```
+sns.kdeplot(data=mart,x='PassengerId',y='Survived')
+```
+![image](https://github.com/user-attachments/assets/d3471dbc-1029-4124-9155-f3c637442f7f)
+```
+import numpy as np  # Import numpy and assign it the alias 'np'
+import seaborn as sns
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+data = np.random.randint(low=1, high=100, size=(10, 10))  # Now np is defined and can be used
+hm = sns.heatmap(data=data, annot=True)
+```
+![image](https://github.com/user-attachments/assets/ea6fc737-21e9-4f8c-bd4d-d837402f13f0)
+```
+hm=sns.heatmap(data=data)
+```
+![image](https://github.com/user-attachments/assets/1b138467-f118-48f2-b8c8-b5dd487da6dd)
 
 
 
@@ -193,4 +208,4 @@ sns.kdeplot(data=mart,x='PassengerId')
 
 
 # Result:
- Include your result here
+ Thus, all the data visualization techniques of seaborn has been implemented.
